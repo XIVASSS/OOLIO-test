@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Order Food Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="site-header">
+        <div>
+          <p class="eyebrow">Mini Food Ordering App</p>
+          <h1>Order food straight from the menu.</h1>
+          <p class="hero-copy">Browse the kitchen selection, add favorites to your cart, and place your order with a confirmation screen.</p>
+        </div>
+        <div class="summary-card">
+          <h2>How it works</h2>
+          <ol>
+            <li>Pick product items from the list</li>
+            <li>Adjust quantity in the cart</li>
+            <li>Apply a discount code</li>
+            <li>Confirm your order</li>
+          </ol>
+        </div>
+      </header>
+
+      <main class="main-grid">
+        <section class="products-panel">
+          <div class="panel-header">
+            <div>
+              <p class="section-label">Menu</p>
+              <h2>Available products</h2>
+            </div>
+            <p class="product-count" id="product-count">Loading…</p>
+          </div>
+          <div class="product-grid" id="product-grid"></div>
+        </section>
+
+        <aside class="cart-panel">
+          <div class="cart-header">
+            <p class="section-label">Cart</p>
+            <h2>Your order</h2>
+          </div>
+          <div class="cart-body" id="cart-body">
+            <p class="empty-cart">Your cart is empty. Add a product to get started.</p>
+          </div>
+
+          <div class="discount-panel">
+            <label for="discount-code">Discount code</label>
+            <input id="discount-code" type="text" placeholder="HAPPYHOURS or BUYGETONE" />
+            <button id="apply-discount" type="button">Apply code</button>
+            <p class="discount-hint">HAPPYHOURS = 18% off, BUYGETONE = free lowest priced item.</p>
+            <p class="discount-message" id="discount-message"></p>
+          </div>
+
+          <div class="totals-card">
+            <div class="totals-row">
+              <span>Subtotal</span>
+              <span id="subtotal">$0.00</span>
+            </div>
+            <div class="totals-row">
+              <span>Discount</span>
+              <span id="discount">-$0.00</span>
+            </div>
+            <div class="totals-row total-line">
+              <span>Total</span>
+              <span id="total">$0.00</span>
+            </div>
+            <button id="submit-order" class="primary-btn" type="button" disabled>Confirm Order</button>
+          </div>
+          <div class="confirmation-panel hidden" id="confirmation-panel">
+            <h3>Order confirmed!</h3>
+            <p id="confirmation-text">Your order has been placed successfully.</p>
+            <button id="new-order" class="secondary-btn" type="button">Start new order</button>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

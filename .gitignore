@@ -107,6 +107,14 @@ dist
 # Docusaurus cache and generated files
 .docusaurus
 
+# Ignore nested dependency directories and build outputs
+**/node_modules/
+**/dist/
+
+# Ignore generated artifacts and macOS metadata
+*.gz
+.DS_Store
+
 # Serverless directories
 .serverless/
 
